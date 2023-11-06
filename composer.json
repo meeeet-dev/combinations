@@ -1,0 +1,53 @@
+{
+    "name": "meeeet-dev/combinations",
+    "description": "Make Combinations with Arrays",
+    "keywords": [
+        "meeeet dev",
+        "combinations"
+    ],
+    "homepage": "https://github.com/meeeet-dev/combinations",
+    "license": "MIT",
+    "type": "library",
+    "authors": [{
+        "name": "Meeeet Dev",
+        "email": "meeeet.dev@gmail.com",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": "^7.1|^8.0",
+        "illuminate/support": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MeeeetDev\\Combinations\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MeeeetDev\\Combinations\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MeeeetDev\\Combinations\\CombinationsServiceProvider"
+            ],
+            "aliases": {
+                "Combinations": "MeeeetDev\\Combinations\\CombinationsFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
